@@ -52,7 +52,8 @@ if st.button("Click for Results") :
     final_df = final_df[final_df["Cleaned_Text"].isin(keyword)]
 
     display_df = final_df[['Text','Star','Cleaned_Text','Suggestion']]
-
+    
+    st.markdown("This is a dataset containing all the positive reviews with low ratings")
     st.dataframe(display_df)
 
     st.bar_chart(df_attention.Suggestion.value_counts())
