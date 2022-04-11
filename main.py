@@ -55,11 +55,13 @@ if st.button("Click for Results") :
     
     st.markdown("This is a dataset containing all the positive reviews with low ratings")
     st.dataframe(display_df)
-
+    
+    st.markdown("This ia visualisation of diffrence between low ratings and high ratings")
     st.bar_chart(df_attention.Suggestion.value_counts())
 
     data = final_df
-
+    
+    st.markdown("Download the dataset with all the incorrect ratings")
     st.download_button(
         label="Download data as CSV",
         data=data.to_csv().encode("utf-8"),
